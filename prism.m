@@ -37,8 +37,7 @@ A=kron(C',eye(3))*diag(kron(C,eye(3))*N(:))*...
     kron(eye(ne),ones(3,1));  %equilibrium matrix
 [U,S,V] = svd(A);
 r=rank(A); %rank of (A_hat*Gp)
-U1=U(:,1:r);U2=U(:,r+1:end);
-S1=S(1:r,1:r);
+
 V1=V(:,1:r);V2=V(:,r+1:end);
 
 t=1e1*V2; % force density
